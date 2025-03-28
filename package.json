@@ -1,0 +1,24 @@
+{
+  "name": "notification-app",
+  "version": "1.0.0",
+  "description": "Aplicação Node.js para monitoramento de eventos no MongoDB e envio de notificações.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon server/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "mongodb": "^6.15.0",
+    "node-telegram-bot-api": "^0.66.0",
+    "nodemailer": "^6.10.0",
+    "notification-app": "file:",
+    "qrcode-terminal": "^0.12.0",
+    "twilio": "^5.5.1",
+    "whatsapp-web.js": "^1.26.0"
+  }
+}
