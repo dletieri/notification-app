@@ -11,13 +11,18 @@ require('dotenv').config();
 // });
 
 const emailTransporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
-  port: 465,
-  secure: true, // true para SSL (porta 465)
+  host: 'smtp.gmail.com', // Usar host em vez de service para maior controle
+  port: 587, // Porta para TLS
+  secure: false, // false para porta 587 (TLS), true para porta 465 (SSL)
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
   },
+  connectionTimeout: 10000, // Timeout de 10 segundos
+  greetingTimeout: 10000,
+  socketTimeout: 10000,
+  logger: true, // Ativar logs detalhados
+  debug: true, // Mostrar logs de depuração
 });
 
 // Configuração do Telegram
