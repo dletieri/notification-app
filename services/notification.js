@@ -21,8 +21,7 @@ const emailTransporter = nodemailer.createTransport({
   connectionTimeout: 10000, // Timeout de 10 segundos
   greetingTimeout: 10000,
   socketTimeout: 10000,
-  logger: true, // Ativar logs detalhados
-  debug: true, // Mostrar logs de depuração
+
 });
 
 // Configuração do Telegram
